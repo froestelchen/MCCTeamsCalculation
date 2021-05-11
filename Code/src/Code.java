@@ -9,9 +9,9 @@ public class Code {
         ArrayList<Contestant> people = new ArrayList<Contestant>();
         initialize(people);
 
-        //calcMin(people);
+        calcMin(people);
         //calcMax(people);
-        calcMinMax(people);
+        //calcMinMax(people);
 
 
     }
