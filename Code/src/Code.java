@@ -8,13 +8,45 @@ public class Code {
     public static void main(String args[]){
         ArrayList<Contestant> people = new ArrayList<Contestant>();
         initialize(people);
+
+        calcMin(people);
+
+        
+    }
+
+    public static void calcMin(ArrayList<Contestant> people){
+        for(int i = 0; i < people.size(); i++){
+            ArrayList<Contestant> people2 = (ArrayList<Contestant>) people.clone();
+            Contestant one = people.get(i);
+            people2.remove(i);
+            for(int j = 0; j < people2.size(); j++){
+                ArrayList<Contestant> people3 = (ArrayList<Contestant>) people2.clone();
+                Contestant two = people.get(j);
+                people3.remove(j);
+                for(int k = 0; k < people3.size(); k++){
+                    ArrayList<Contestant> people4 = (ArrayList<Contestant>) people3.clone();
+                    Contestant three = people2.get(k);
+                    people4.remove(k);
+                    for(int l = 0; l < people4.size(); l++){
+                        Contestant four = people3.get(l);
+                        int sum = one.getScore() + two.getScore() + three.getScore() + four.getScore();
+                        if(sum == MIN){
+                            System.out.println(one + " " + two + " " + three + " " + four + ": " + sum);
+                        }
+                    }
+                    people4.add(three);
+                }
+                people3.add(two);
+            }
+            people2.add(one);
+        }
     }
 
     private static void initialize(ArrayList<Contestant> people) {
         people.add(new Contestant("BBPaws", 1401));
         people.add(new Contestant("Bitzel", 2372));
-        people.add(new Contestant("Cpt. Puffy", 1878));
-        people.add(new Contestant("Cpt. Sparklez", 2374));
+        people.add(new Contestant("Cpt.Puffy", 1878));
+        people.add(new Contestant("Cpt.Sparklez", 2374));
         people.add(new Contestant("ConnorEatsPants", 959));
         people.add(new Contestant("Cubfan", 1701));
         people.add(new Contestant("Calvan", 2546));
@@ -39,16 +71,16 @@ public class Code {
         people.add(new Contestant("InTheLittleWood", 1766));
         people.add(new Contestant("Iskall", 2158));
         people.add(new Contestant("JackSucksAtLife", 1208));
-        people.add(new Contestant("James Charles", 708));
+        people.add(new Contestant("JamesCharles", 708));
         people.add(new Contestant("Jameskii", 1658));
-        people.add(new Contestant("James Turner", 734));
-        people.add(new Contestant("JC the Caster", 2614));
-        people.add(new Contestant("Jerome ASF", 1671));
+        people.add(new Contestant("JamesTurner", 734));
+        people.add(new Contestant("JCtheCaster", 2614));
+        people.add(new Contestant("JeromeASF", 1671));
         people.add(new Contestant("Jestanii", 1493));
         people.add(new Contestant("JoeyGraceffa", 347));
         people.add(new Contestant("KaraCorvus", 1806));
-        people.add(new Contestant("Karl Jacobs", 1487));
-        people.add(new Contestant("Katerine Elizabeth", 1430));
+        people.add(new Contestant("KarlJacobs", 1487));
+        people.add(new Contestant("KaterineElizabeth", 1430));
         people.add(new Contestant("Burren", 2142));
         people.add(new Contestant("Krinios", 2680));
         people.add(new Contestant("Krtzyy", 3049));
@@ -78,7 +110,7 @@ public class Code {
         people.add(new Contestant("RyGuyRocky", 2116));
         people.add(new Contestant("Sapnap", 2886));
         people.add(new Contestant("SB737", 2413));
-        people.add(new Contestant("Scot Grisworld", 869));
+        people.add(new Contestant("ScotGrisworld", 869));
         people.add(new Contestant("Seapeekay", 2063));
         people.add(new Contestant("Shubble", 2001));
         people.add(new Contestant("Scott", 2403));
@@ -99,7 +131,7 @@ public class Code {
         people.add(new Contestant("Vikkstar", 2660));
         people.add(new Contestant("Vixella", 564));
         people.add(new Contestant("VoiceOverPete", 857));
-        people.add(new Contestant("Wilbur Soot", 1967));
+        people.add(new Contestant("WilburSoot", 1967));
         people.add(new Contestant("Wisp", 2048));
         people.add(new Contestant("Wolv", 1643));
         people.add(new Contestant("Yammy", 1582));
