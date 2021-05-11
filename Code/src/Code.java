@@ -9,11 +9,97 @@ public class Code {
         ArrayList<Contestant> people = new ArrayList<Contestant>();
         initialize(people);
 
-        calcMin(people);
+        //calcMin(people);
+        //calcMax(people);
+        calcMinMax(people);
 
 
     }
 
+    public static void calcMinMax(ArrayList<Contestant> people){
+        for(int i = 0; i < people.size(); i++){
+            ArrayList<Contestant> people2 = (ArrayList<Contestant>) people.clone();
+            Contestant one = people.get(i);
+            people2.remove(i);
+            for(int j = 0; j < people2.size(); j++){
+                ArrayList<Contestant> people3 = (ArrayList<Contestant>) people2.clone();
+                Contestant two = people2.get(j);
+                people3.remove(j);
+                for(int k = 0; k < people3.size(); k++){
+                    ArrayList<Contestant> people4 = (ArrayList<Contestant>) people3.clone();
+                    Contestant three = people3.get(k);
+                    people4.remove(k);
+                    for(int l = 0; l < people4.size(); l++){
+                        ArrayList<Contestant> people5 = (ArrayList<Contestant>) people4.clone();
+                        Contestant four = people4.get(l);
+                        people5.remove(l);
+                        int sum = one.getScore() + two.getScore() + three.getScore() + four.getScore();
+                        if(sum == MIN){
+                            calcmMax(people5, one, two, three, four, sum);
+                        }
+                    }
+                    people4.add(three);
+                }
+                people3.add(two);
+            }
+            people2.add(one);
+        }
+    }
+    public static void calcmMax(ArrayList<Contestant> people, Contestant one, Contestant two, Contestant three, Contestant four, int sum1){
+        for(int i = 0; i < people.size(); i++) {
+            ArrayList<Contestant> people2 = (ArrayList<Contestant>) people.clone();
+            Contestant five = people.get(i);
+            people2.remove(i);
+            for (int j = 0; j < people2.size(); j++) {
+                ArrayList<Contestant> people3 = (ArrayList<Contestant>) people2.clone();
+                Contestant six = people2.get(j);
+                people3.remove(j);
+                for (int k = 0; k < people3.size(); k++) {
+                    ArrayList<Contestant> people4 = (ArrayList<Contestant>) people3.clone();
+                    Contestant seven = people3.get(k);
+                    people4.remove(k);
+                    for (int l = 0; l < people4.size(); l++) {
+                        Contestant eight = people4.get(l);
+                        int sum2 = five.getScore() + six.getScore() + seven.getScore() + eight.getScore();
+                        if (sum2 == MAX) {
+                            System.out.println("(" + one + " " + two + " " + three + " " + four + ": " + sum1 + "), (" + five + " " + six + " " + seven + " " + eight + ": " + sum2 + ")");
+                        }
+                    }
+                    people4.add(seven);
+                }
+                people3.add(six);
+            }
+            people2.add(five);
+        }
+    }
+
+    public static void calcMax(ArrayList<Contestant> people){
+        for(int i = 0; i < people.size(); i++) {
+            ArrayList<Contestant> people2 = (ArrayList<Contestant>) people.clone();
+            Contestant one = people.get(i);
+            people2.remove(i);
+            for (int j = 0; j < people2.size(); j++) {
+                ArrayList<Contestant> people3 = (ArrayList<Contestant>) people2.clone();
+                Contestant two = people2.get(j);
+                people3.remove(j);
+                for (int k = 0; k < people3.size(); k++) {
+                    ArrayList<Contestant> people4 = (ArrayList<Contestant>) people3.clone();
+                    Contestant three = people3.get(k);
+                    people4.remove(k);
+                    for (int l = 0; l < people4.size(); l++) {
+                        Contestant four = people4.get(l);
+                        int sum = one.getScore() + two.getScore() + three.getScore() + four.getScore();
+                        if (sum == MAX) {
+                            System.out.println("(" + one + " " + two + " " + three + " " + four + ": " + sum + ")");
+                        }
+                    }
+                    people4.add(three);
+                }
+                people3.add(two);
+            }
+            people2.add(one);
+        }
+    }
     public static void calcMin(ArrayList<Contestant> people){
         for(int i = 0; i < people.size(); i++){
             ArrayList<Contestant> people2 = (ArrayList<Contestant>) people.clone();
@@ -21,14 +107,14 @@ public class Code {
             people2.remove(i);
             for(int j = 0; j < people2.size(); j++){
                 ArrayList<Contestant> people3 = (ArrayList<Contestant>) people2.clone();
-                Contestant two = people.get(j);
+                Contestant two = people2.get(j);
                 people3.remove(j);
                 for(int k = 0; k < people3.size(); k++){
                     ArrayList<Contestant> people4 = (ArrayList<Contestant>) people3.clone();
-                    Contestant three = people2.get(k);
+                    Contestant three = people3.get(k);
                     people4.remove(k);
                     for(int l = 0; l < people4.size(); l++){
-                        Contestant four = people3.get(l);
+                        Contestant four = people4.get(l);
                         int sum = one.getScore() + two.getScore() + three.getScore() + four.getScore();
                         if(sum == MIN){
                             System.out.println("(" + one + " " + two + " " + three + " " + four + ": " + sum + ")");
