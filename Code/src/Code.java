@@ -11,7 +11,7 @@ public class Code {
 
         calcMin(people);
 
-        
+
     }
 
     public static void calcMin(ArrayList<Contestant> people){
@@ -31,7 +31,7 @@ public class Code {
                         Contestant four = people3.get(l);
                         int sum = one.getScore() + two.getScore() + three.getScore() + four.getScore();
                         if(sum == MIN){
-                            System.out.println(one + " " + two + " " + three + " " + four + ": " + sum);
+                            System.out.println("(" + one + " " + two + " " + three + " " + four + ": " + sum + ")");
                         }
                     }
                     people4.add(three);
