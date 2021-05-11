@@ -1,6 +1,9 @@
 import java.util.ArrayList;
 
 public class Code {
+    final static int MIN = 8546;
+    final static int MAX = 9280;
+    final static int TEAMS = 10;
 
     public static void main(String args[]){
         ArrayList<Contestant> people = new ArrayList<Contestant>();
