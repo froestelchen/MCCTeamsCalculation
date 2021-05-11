@@ -137,7 +137,7 @@ public class Code {
         people.add(new Contestant("Cubfan", 1701));
         people.add(new Contestant("Calvan", 2546));
         people.add(new Contestant("DanTDM", 2114));
-        people.add(new Contestant("Wahzdah", 1599));
+        //people.add(new Contestant("Wahzdah", 1599));
         people.add(new Contestant("Dream", 2833));
         people.add(new Contestant("Drgluon", 456));
         people.add(new Contestant("F1NN5TER", 1725));
@@ -151,16 +151,16 @@ public class Code {
         people.add(new Contestant("Graser", 2008));
         people.add(new Contestant("Grian", 2308));
         people.add(new Contestant("HBomb", 2821));
-        people.add(new Contestant("IHasCupquake", 1032));
-        people.add(new Contestant("Jevin", 1654));
+        //people.add(new Contestant("IHasCupquake", 1032));
+        //people.add(new Contestant("Jevin", 1654));
         people.add(new Contestant("Illumina", 2849));
         people.add(new Contestant("InTheLittleWood", 1766));
         people.add(new Contestant("Iskall", 2158));
-        people.add(new Contestant("JackSucksAtLife", 1208));
+        //people.add(new Contestant("JackSucksAtLife", 1208));
         people.add(new Contestant("JamesCharles", 708));
-        people.add(new Contestant("Jameskii", 1658));
+        //people.add(new Contestant("Jameskii", 1658));
         people.add(new Contestant("JamesTurner", 734));
-        people.add(new Contestant("JCtheCaster", 2614));
+        //people.add(new Contestant("JCtheCaster", 2614));
         people.add(new Contestant("JeromeASF", 1671));
         people.add(new Contestant("Jestanii", 1493));
         people.add(new Contestant("JoeyGraceffa", 347));
@@ -178,7 +178,7 @@ public class Code {
         people.add(new Contestant("Mefs", 2069));
         people.add(new Contestant("MichaelMC", 1692));
         people.add(new Contestant("MiniMuka", 1936));
-        people.add(new Contestant("NettyPlays", 1351));
+        //people.add(new Contestant("NettyPlays", 1351));
         people.add(new Contestant("Nihachu", 1102));
         people.add(new Contestant("PEARLBYTEZ", 705));
         people.add(new Contestant("Pearl", 1930));
@@ -196,7 +196,7 @@ public class Code {
         people.add(new Contestant("RyGuyRocky", 2116));
         people.add(new Contestant("Sapnap", 2886));
         people.add(new Contestant("SB737", 2413));
-        people.add(new Contestant("ScotGrisworld", 869));
+        //people.add(new Contestant("ScotGrisworld", 869));
         people.add(new Contestant("Seapeekay", 2063));
         people.add(new Contestant("Shubble", 2001));
         people.add(new Contestant("Scott", 2403));
@@ -206,7 +206,7 @@ public class Code {
         people.add(new Contestant("Steph0sims", 533));
         people.add(new Contestant("Strawburry", 1183));
         people.add(new Contestant("Sylvee", 1641));
-        people.add(new Contestant("TankMatt", 1642));
+        //people.add(new Contestant("TankMatt", 1642));
         people.add(new Contestant("TapL", 2827));
         people.add(new Contestant("Technoblade", 3112));
         people.add(new Contestant("Eret", 1998));
@@ -219,7 +219,7 @@ public class Code {
         people.add(new Contestant("VoiceOverPete", 857));
         people.add(new Contestant("WilburSoot", 1967));
         people.add(new Contestant("Wisp", 2048));
-        people.add(new Contestant("Wolv", 1643));
+        //people.add(new Contestant("Wolv", 1643));
         people.add(new Contestant("Yammy", 1582));
     }
 
